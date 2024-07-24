@@ -39,10 +39,22 @@
   .w3-background-primary {
     background-color: #36013F !important;
   }
+
+  .w3-text-white {
+    color: #fff !important;
+  }
 </style>
 <script>
   function showAbstract() {
     var abstract = document.getElementById("abstract");
+    if (abstract.style.display === "none") {
+      abstract.style.display = "block";
+    } else {
+      abstract.style.display = "none";
+    }
+  }
+  function showWorkingPaperAbstract() {
+    var abstract = document.getElementById("working-paper-abstract");
     if (abstract.style.display === "none") {
       abstract.style.display = "block";
     } else {
@@ -143,6 +155,22 @@
 
         <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-text-primary w3-padding-16"><i
+              class="fa fa-file-alt fa-fw w3-margin-right w3-xxlarge"></i>Working Paper</h2>
+
+          <div class="w3-container">
+            <p class="w3-opacity"><b>Pricing of Services: An Analysis of the Impact of Availability Bias</b></p>
+            <p>Sanjay Jain, Jin Miao</p>
+            <button onclick="showWorkingPaperAbstract()" class="w3-button w3-primary w3-margin-top">Abstract</button>
+            <div id="working-paper-abstract" style="display:none; margin-top: 15px;">
+              <p>Firms often offer subscriptions for services. For example, firms offer extended appliance warranties, and subscription plans for golf or symphony. Some offer free service at the point of service, while others offer discounted prices. Others offer exclusive benefits for subscribers. Some of these plans have been criticized as being exploitative. Extended warranties have often been criticized as being over-priced since the cost to buy such extended service plans exceeds the expected costs without the plans. Reputable sources such as Consumer Reports advise consumers not to purchase extended warranties. From the consumer’s perspective, before purchasing a subscription, they need to estimate the probability that they will need the service in the future. Prior research has shown that consumers often make errors in predicting the future. In this paper, we use the literature on availability bias to model consumer expectations about the probability that they will need the service and study the design of optimal service plans. We find that availability bias can sometimes benefit consumers at the expense of firms. We also establish conditions under which the firm will offer a plan that offers free services at the time of service and one in which the firm will charge a discounted price at the time of service. We find that when firms are able to offer subscription plans, the prices that they offer in the spot market are higher, than they would be absent such subscription plans. Our results show that availability bias can lead to firms offering socially wasteful services, where the cost of service exceeds the valuation of all consumers. We also show that availability bias would lead to firms offering exclusive services bundled with some subscription plans. Our results show that even under perfect competition, social welfare with availability bias is lower.</p>
+            </div>
+            <hr>
+          </div>
+
+        </div>
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-primary w3-padding-16"><i
               class="fa fa-heart fa-fw w3-margin-right w3-xxlarge"></i>Teaching Experience</h2>
           <div class="w3-container">
             <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>
@@ -152,24 +180,6 @@
             <p><i class="fa fa-building fa-fw w3-margin-right"></i>Solo Instructor&nbsp&nbsp&nbsp&nbsp<i
                 class="fa fa-calendar fa-fw w3-margin-right"></i> Fall 2024</p>
             <p>Class Size: 56</p>
-            <hr>
-          </div>
-        </div>
-
-        
-        <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-primary w3-padding-16"><i
-              class="fa fa-firefox fa-fw w3-margin-right w3-xxlarge"></i>Teaching Assistantship</h2>
-          <div class="w3-container">
-            <p class="w3-opacity"><b>Predictive Analysis for Data Science</b></p>
-            <p><i class="fa fa-calendar fa-fw w3-margin-right"></i>Spring 2024</p>
-
-            <p class="w3-opacity"><b>Social Media Marketing</b></p>
-            <p><i class="fa fa-calendar fa-fw w3-margin-right"></i>Spring 2022</p>
-            
-            <p class="w3-opacity"><b>Marketing Management</b></p>
-            <p><i class="fa fa-calendar fa-fw w3-margin-right"></i>Fall 2021</p>
-            
             <hr>
           </div>
         </div>
@@ -187,6 +197,23 @@
           </div>
         </div>
 
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-primary w3-padding-16"><i
+              class="fa fa-firefox fa-fw w3-margin-right w3-xxlarge"></i>Teaching Assistantship</h2>
+          <div class="w3-container">
+            <p class="w3-opacity"><b>Predictive Analysis for Data Science</b></p>
+            <p><i class="fa fa-calendar fa-fw w3-margin-right"></i>Spring 2024</p>
+
+            <p class="w3-opacity"><b>Social Media Marketing</b></p>
+            <p><i class="fa fa-calendar fa-fw w3-margin-right"></i>Spring 2022</p>
+            
+            <p class="w3-opacity"><b>Marketing Management</b></p>
+            <p><i class="fa fa-calendar fa-fw w3-margin-right"></i>Fall 2021</p>
+            
+            <hr>
+          </div>
+        </div>
+
         <!-- End Right Column -->
       </div>
 
@@ -196,8 +223,8 @@
     <!-- End Page Container -->
   </div>
 
-  <footer class="w3-container w3-background-primary w3-center w3-margin-top">
-    <p class="w3-text-white">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-text-white">w3.css</a></p>
+  <footer class="w3-container w3-deep-purple w3-center w3-margin-top">
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
   </footer>
 
 </body>
