@@ -40,6 +40,16 @@
     background-color: #36013F !important;
   }
 </style>
+<script>
+  function showAbstract() {
+    var abstract = document.getElementById("abstract");
+    if (abstract.style.display === "none") {
+      abstract.style.display = "block";
+    } else {
+      abstract.style.display = "none";
+    }
+  }
+</script>
 
 <body class="w3-light-grey">
 
@@ -122,6 +132,10 @@
             <p class="w3-text-primary">
               <a href="https://pubsonline.informs.org/doi/10.1287/mksc.2023.0007"><i class="fa fa-external-link-alt fa-fw w3-margin-right"></i>Read the Full Paper Online</a>
             </p>
+            <button onclick="showAbstract()" class="w3-button w3-primary w3-margin-top">Abstract</button>
+            <div id="abstract" style="display:none; margin-top: 15px;">
+              <p>A loot box is a probabilistic allocation of virtual products, the exact outcome of which is known to consumers only after purchase. Consumers sometimes purchase these goods multiple times until their preferred products are obtained. As loot boxes have been gaining enormous popularity in recent years, they are often criticized as exploitative and socially wasteful. In this study, we develop a stylized model to study the optimal design of loot boxes and its impact on profits and social welfare. We find that firms may assign asymmetric probabilities to ex ante symmetric products. Firms could use loot boxes to offer products at low prices to users who would not buy these products under the traditional pricing strategy. Loot boxes enable firms to earn higher profits due to better price discrimination and market expansion. Contrary to the widespread criticism of loot boxes as socially harmful, our analysis reveals that the loot box strategy can improve social welfare. Some platforms promise that consumers can obtain their preferred products with no more than a certain number of purchases. Contrary to conventional wisdom, our analysis reveals that such a strategy can increase firm’s profits while reducing consumer welfare.</p>
+            </div>
             <hr>
           </div>
 
