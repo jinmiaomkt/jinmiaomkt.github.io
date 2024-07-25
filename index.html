@@ -61,6 +61,14 @@
       abstract.style.display = "none";
     }
   }
+  function showQuotes() {
+    var quotes = document.getElementById("quotes");
+    if (quotes.style.display === "none") {
+      quotes.style.display = "block";
+    } else {
+      quotes.style.display = "none";
+    }
+  }
 </script>
 
 <body class="w3-light-grey">
@@ -77,9 +85,6 @@
         <div class="w3-white w3-text-primary w3-card-4">
           <div class="w3-display-container">
             <img src="./imgs/selfie.jpg" style="width:100%" alt="Avatar">
-            <div class="w3-display-bottomleft w3-container w3-text-white">
-              <h2 class="w3-text-white">Jin Miao</h2>
-            </div>
           </div>
           <div class="w3-container">
             <p><i class="fa fa-home fa-fw w3-margin-right w3-large"></i>Richardson, TX</p>
@@ -180,6 +185,15 @@
             <p><i class="fa fa-building fa-fw w3-margin-right"></i>Solo Instructor&nbsp&nbsp&nbsp&nbsp<i
                 class="fa fa-calendar fa-fw w3-margin-right"></i> Fall 2024</p>
             <p>Class Size: 56</p>
+            <button onclick="showQuotes()" class="w3-button w3-primary w3-margin-top">Quotes from anonymous student evaluation forms</button>
+            <div id="quotes" style="display:none; margin-top: 15px;">
+              <ul>
+                <li>Professor was amazing and always willing to listen to questions and concerns. Her knowledge and understanding of the material was outstanding and overall a well-made class.</li>
+                <li>Just about everything Professor Miao went over is very applicable to the world of marketing, I believe he did a good job overall.</li>
+                <li>He is a really kind and well-spoken professor, topics were well explained and assignments are clear and easy to find. I fairly enjoyed the class and would highly recommend.</li>
+              </ul>
+            </div>
+            <p><i class="fa fa-file-pdf fa-fw w3-margin-right"></i><a href="/doc/Jin%20Miao%20Teaching%20Eval.pdf" target="_blank">Official Teaching Evaluation Form</a></p>
             <hr>
           </div>
         </div>
