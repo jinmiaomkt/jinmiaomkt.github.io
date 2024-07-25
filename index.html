@@ -43,6 +43,25 @@
   .w3-text-white {
     color: #fff !important;
   }
+
+  .button-shaded {
+    background-color: #36013F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .button-shaded:hover {
+    background-color: #4a1456;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .button-shaded:focus {
+    outline: none;
+  }
 </style>
 <script>
   function showAbstract() {
@@ -149,7 +168,7 @@
             <p class="w3-text-primary">
               <a href="https://pubsonline.informs.org/doi/10.1287/mksc.2023.0007"><i class="fa fa-external-link-alt fa-fw w3-margin-right"></i>Read the Full Paper Online</a>
             </p>
-            <button onclick="showAbstract()" class="w3-button w3-primary w3-margin-top">Abstract</button>
+            <button onclick="showAbstract()" class="w3-button button-shaded w3-margin-top">Abstract</button>
             <div id="abstract" style="display:none; margin-top: 15px;">
               <p>A loot box is a probabilistic allocation of virtual products, the exact outcome of which is known to consumers only after purchase. Consumers sometimes purchase these goods multiple times until their preferred products are obtained. As loot boxes have been gaining enormous popularity in recent years, they are often criticized as exploitative and socially wasteful. In this study, we develop a stylized model to study the optimal design of loot boxes and its impact on profits and social welfare. We find that firms may assign asymmetric probabilities to ex ante symmetric products. Firms could use loot boxes to offer products at low prices to users who would not buy these products under the traditional pricing strategy. Loot boxes enable firms to earn higher profits due to better price discrimination and market expansion. Contrary to the widespread criticism of loot boxes as socially harmful, our analysis reveals that the loot box strategy can improve social welfare. Some platforms promise that consumers can obtain their preferred products with no more than a certain number of purchases. Contrary to conventional wisdom, our analysis reveals that such a strategy can increase firm’s profits while reducing consumer welfare.</p>
             </div>
@@ -165,7 +184,7 @@
           <div class="w3-container">
             <p class="w3-opacity"><b>Pricing of Services: An Analysis of the Impact of Availability Bias</b></p>
             <p>Sanjay Jain, Jin Miao</p>
-            <button onclick="showWorkingPaperAbstract()" class="w3-button w3-primary w3-margin-top">Abstract</button>
+            <button onclick="showWorkingPaperAbstract()" class="w3-button button-shaded w3-margin-top">Abstract</button>
             <div id="working-paper-abstract" style="display:none; margin-top: 15px;">
               <p>Firms often offer subscriptions for services. For example, firms offer extended appliance warranties, and subscription plans for golf or symphony. Some offer free service at the point of service, while others offer discounted prices. Others offer exclusive benefits for subscribers. Some of these plans have been criticized as being exploitative. Extended warranties have often been criticized as being over-priced since the cost to buy such extended service plans exceeds the expected costs without the plans. Reputable sources such as Consumer Reports advise consumers not to purchase extended warranties. From the consumer’s perspective, before purchasing a subscription, they need to estimate the probability that they will need the service in the future. Prior research has shown that consumers often make errors in predicting the future. In this paper, we use the literature on availability bias to model consumer expectations about the probability that they will need the service and study the design of optimal service plans. We find that availability bias can sometimes benefit consumers at the expense of firms. We also establish conditions under which the firm will offer a plan that offers free services at the time of service and one in which the firm will charge a discounted price at the time of service. We find that when firms are able to offer subscription plans, the prices that they offer in the spot market are higher, than they would be absent such subscription plans. Our results show that availability bias can lead to firms offering socially wasteful services, where the cost of service exceeds the valuation of all consumers. We also show that availability bias would lead to firms offering exclusive services bundled with some subscription plans. Our results show that even under perfect competition, social welfare with availability bias is lower.</p>
             </div>
@@ -183,7 +202,7 @@
                 class="fa fa-calendar fa-fw w3-margin-right"></i> Fall 2023</p>
             <p>Class Size: 49, Teaching Evaluation: 4.79/5.00</p>
             <p><i class="fa fa-file-pdf fa-fw w3-margin-right"></i><a href="/doc/Jin%20Miao%20Teaching%20Eval.pdf" target="_blank">Official Teaching Evaluation Form</a></p>
-            <button onclick="showQuotes()" class="w3-button w3-primary w3-margin-top">Quotes from anonymous student evaluation forms</button>
+            <button onclick="showQuotes()" class="w3-button button-shaded w3-margin-top">Quotes from anonymous student evaluation forms</button>
             <div id="quotes" style="display:none; margin-top: 15px;">
               <ul>
                 <li>Professor was amazing and always willing to listen to questions and concerns. Her knowledge and understanding of the material was outstanding and overall a well-made class.</li>
