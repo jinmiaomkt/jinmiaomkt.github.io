@@ -194,41 +194,81 @@
         </div>
 
         <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-primary w3-padding-16"><i
-              class="fa fa-heart fa-fw w3-margin-right w3-xxlarge"></i>Teaching Experience</h2>
-          <div class="w3-container">
-            <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>
-            <p><i class="fa fa-building fa-fw w3-margin-right"></i>Solo Instructor&nbsp&nbsp&nbsp&nbsp<i
-                class="fa fa-calendar fa-fw w3-margin-right"></i> Fall 2023</p>
-            <p>Class Size: 49, Teaching Evaluation: 4.79/5.00</p>
-            <p><i class="fa fa-file-pdf fa-fw w3-margin-right"></i><a href="/doc/Jin%20Miao%20Teaching%20Eval.pdf" target="_blank">Official Teaching Evaluation Form</a></p>
-            <button onclick="showQuotes()" class="w3-button button-shaded w3-margin-top">Quotes from anonymous student evaluation forms</button>
-            <div id="quotes" style="display:none; margin-top: 15px;">
-              <ul>
-                <li>Professor was amazing and always willing to listen to questions and concerns. Her knowledge and understanding of the material was outstanding and overall a well-made class.</li>
-                <li>Just about everything Professor Miao went over is very applicable to the world of marketing, I believe he did a good job overall.</li>
-                <li>He is a really kind and well-spoken professor, topics were well explained and assignments are clear and easy to find. I fairly enjoyed the class and would highly recommend.</li>
-              </ul>
-            </div>
-            <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>
-            <p><i class="fa fa-building fa-fw w3-margin-right"></i>Solo Instructor&nbsp&nbsp&nbsp&nbsp<i
-                class="fa fa-calendar fa-fw w3-margin-right"></i> Fall 2024</p>
-            <p>Class Size: 56, Teaching Evaluation: 5.00/5.00</p>
-            <p><i class="fa fa-file-pdf fa-fw w3-margin-right"></i><a href="/doc/Jin%20Miao%20Teaching%20Evaluation%20F24.pdf" target="_blank">Official Teaching Evaluation Form</a></p>
-            <button onclick="showQuotes()" class="w3-button button-shaded w3-margin-top">Quotes from anonymous student evaluation forms</button>
-            <div id="quotes" style="display:none; margin-top: 15px;">
-              <ul>
-                <li>I genuinely like the structure of the course, with each element of the course being split up and combined at the end. It helps students not only see progression but also how everything they learned simultaneously comes together in marketing.</li>
-                <li>Great class! I learned a lot and was able to grasp marketing a lot better than I originally anticipated after completing the course.</li>
-                <li>Everything in this course was great. The exams were a bit challenging, especially the math portions for the final exam but other than that, this class was a pleasure to take. Thank you!</li>
-                <li>The prof is great and the way that he teaches makes everything easy to understand.</li>
-                <li>The course overall was high in terms of memorability, personally. I would suggest feeling more comfortable with the class, which would reciprocate with the class feeling more comfortable as well. You are incredibly knowledgable, and I can rely on your responses to satisfy questions regarding key concepts and requirements, if needed. I am overall very happy with how the semester came to be, and it is very bittersweet to meet the end of it. Best of luck!</li>
-                <li>I am very satisfied with my experience in this course. The professor was excellent—knowledgeable, approachable, and always willing to help. The assignments, homework, and tests were fair and aligned well with the material covered in class. Overall, it was a great learning experience, and I wouldn’t change anything.</li>
-              </ul>
-            </div>
-            <hr>
-          </div>
-        </div>
+    <h2 class="w3-text-primary w3-padding-16">
+      <i class="fa fa-heart fa-fw w3-margin-right w3-xxlarge"></i>
+      Teaching Experience
+    </h2>
+
+    <!-- 1st Course Section -->
+    <div class="w3-container">
+      <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>
+      <p>
+        <i class="fa fa-building fa-fw w3-margin-right"></i>Solo Instructor
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="fa fa-calendar fa-fw w3-margin-right"></i> Fall 2023
+      </p>
+      <p>Class Size: 49, Teaching Evaluation: 4.79/5.00</p>
+      <p>
+        <i class="fa fa-file-pdf fa-fw w3-margin-right"></i>
+        <a href="/doc/Jin%20Miao%20Teaching%20Eval.pdf" target="_blank">
+          Official Teaching Evaluation Form
+        </a>
+      </p>
+      <button onclick="toggleQuotes('quotes1')" class="w3-button button-shaded w3-margin-top">
+        Quotes from anonymous student evaluation forms
+      </button>
+      <div id="quotes1" style="display:none; margin-top: 15px;">
+        <ul>
+          <li>Professor was amazing and always willing to listen to questions and concerns. Her knowledge and understanding of the material was outstanding and overall a well-made class.</li>
+          <li>Just about everything Professor Miao went over is very applicable to the world of marketing, I believe he did a good job overall.</li>
+          <li>He is a really kind and well-spoken professor, topics were well explained and assignments are clear and easy to find. I fairly enjoyed the class and would highly recommend.</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+
+    <!-- 2nd Course Section -->
+    <div class="w3-container">
+      <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>
+      <p>
+        <i class="fa fa-building fa-fw w3-margin-right"></i>Solo Instructor
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="fa fa-calendar fa-fw w3-margin-right"></i> Fall 2024
+      </p>
+      <p>Class Size: 56, Teaching Evaluation: 5.00/5.00</p>
+      <p>
+        <i class="fa fa-file-pdf fa-fw w3-margin-right"></i>
+        <a href="/doc/Jin%20Miao%20Teaching%20Evaluation%20F24.pdf" target="_blank">
+          Official Teaching Evaluation Form
+        </a>
+      </p>
+      <button onclick="toggleQuotes('quotes2')" class="w3-button button-shaded w3-margin-top">
+        Quotes from anonymous student evaluation forms
+      </button>
+      <div id="quotes2" style="display:none; margin-top: 15px;">
+        <ul>
+          <li>I genuinely like the structure of the course, with each element of the course being split up and combined at the end. It helps students not only see progression but also how everything they learned simultaneously comes together in marketing.</li>
+          <li>Great class! I learned a lot and was able to grasp marketing a lot better than I originally anticipated after completing the course.</li>
+          <li>Everything in this course was great. The exams were a bit challenging, especially the math portions for the final exam but other than that, this class was a pleasure to take. Thank you!</li>
+          <li>The prof is great and the way that he teaches makes everything easy to understand.</li>
+          <li>The course overall was high in terms of memorability, personally. I would suggest feeling more comfortable with the class, which would reciprocate with the class feeling more comfortable as well. You are incredibly knowledgable, and I can rely on your responses to satisfy questions regarding key concepts and requirements, if needed. I am overall very happy with how the semester came to be, and it is very bittersweet to meet the end of it. Best of luck!</li>
+          <li>I am very satisfied with my experience in this course. The professor was excellent—knowledgeable, approachable, and always willing to help. The assignments, homework, and tests were fair and aligned well with the material covered in class. Overall, it was a great learning experience, and I wouldn’t change anything.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Section -->
+  <script>
+    function toggleQuotes(divId) {
+      const quoteSection = document.getElementById(divId);
+      if (quoteSection.style.display === 'none') {
+        quoteSection.style.display = 'block';
+      } else {
+        quoteSection.style.display = 'none';
+      }
+    }
+  </script>
 
         <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-text-primary w3-padding-16"><i
