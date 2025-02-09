@@ -18,6 +18,11 @@
         color: black;
       }
       
+      /* Increase the font size for all section titles */
+      h2 {
+        font-size: 28px;
+      }
+      
       /* Override W3.CSS primary classes to use black */
       .w3-text-primary {
         color: black !important;
@@ -30,7 +35,6 @@
       }
       
       /* Special styling for Publication and Working Paper titles */
-      /* (Add the 'purple-title' class to those h2’s) */
       h2.purple-title {
         color: #36013F !important;
       }
@@ -71,9 +75,9 @@
         var abstract = document.getElementById("working-paper-abstract");
         abstract.style.display = abstract.style.display === "none" ? "block" : "none";
       }
-      function showQuotes() {
-        var quotes = document.getElementById("quotes");
-        quotes.style.display = quotes.style.display === "none" ? "block" : "none";
+      function toggleQuotes(divId) {
+        const quoteSection = document.getElementById(divId);
+        quoteSection.style.display = quoteSection.style.display === 'none' ? 'block' : 'none';
       }
     </script>
   </head>
@@ -91,49 +95,24 @@
               <img src="./imgs/selfie.jpg" style="width:100%" alt="Avatar">
             </div>
             <div class="w3-container">
-              <p><i class="fa fa-home fa-fw w3-margin-right w3-large"></i>Richardson, TX</p>
-              <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large"></i>Jin.Miao@utdallas.edu</p>
+              <p>
+                <i class="fa fa-home fa-fw w3-margin-right w3-large"></i>Richardson, TX
+              </p>
+              <p>
+                <i class="fa fa-envelope fa-fw w3-margin-right w3-large"></i>Jin.Miao@utdallas.edu
+              </p>
               <p>
                 <i class="fa fa-file-pdf fa-fw w3-margin-right w3-large"></i>
-                <a href="https://jinmiaomkt.github.io/doc/Jin%20Miao%20CV%20Feb%202025.pdf" target="_blank">
-                  View My CV
-                </a>
+                <a href="https://jinmiaomkt.github.io/doc/Jin%20Miao%20CV%20Feb%202025.pdf" target="_blank">View My CV</a>
               </p>
               <!-- <p><i class="fa fa-phone fa-fw w3-margin-right w3-large"></i>1224435534</p> -->
               <hr>
-              <p class="w3-large"></p>
-              <p>
+              <p class="w3-large">
                 Jin Miao is a Ph.D. candidate of quantitative marketing at the University of Texas at Dallas.
                 I use large language models and game‐theoretic models to study consumer behavior, market dynamics, and marketing strategies.
               </p>
               <hr>
-              
-              <div class="w3-container w3-card w3-white w3-margin-bottom">
-                <h2 class="w3-padding-16">
-                  <i class="fa fa-chalkboard-teacher fa-fw w3-margin-right w3-xxlarge"></i>
-                  Research Interests
-                </h2>
-                <div class="w3-container">
-                  <p class="w3-opacity"><b>LLMs in Marketing</b></p>
-                  <p class="w3-opacity"><b>Behavioral Economics in Service Marketing</b></p>
-                  <p class="w3-opacity"><b>Product and Pricing Strategies</b></p>
-                  <hr>
-                </div>
-              </div>
-              
-              <div class="w3-container w3-card w3-white w3-margin-bottom">
-                <h2 class="w3-padding-16">
-                  <i class="fa fa-chalkboard-teacher fa-fw w3-margin-right w3-xxlarge"></i>
-                  Teaching Interests
-                </h2>
-                <div class="w3-container">
-                  <p class="w3-opacity"><b>LLMs in Marketing</b></p>
-                  <p class="w3-opacity"><b>Digital Marketing</b></p>
-                  <p class="w3-opacity"><b>Pricing Strategy</b></p>
-                  <hr>
-                </div>
-              </div>
-              
+              <!-- Research Interests and Teaching Interests sections have been removed -->
             </div>
           </div>
           <br>
@@ -142,7 +121,7 @@
         
         <!-- Right Column -->
         <div class="w3-twothird">
-          <!-- Publication Section (kept purple) -->
+          <!-- Publication Section (titles in purple) -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-padding-16 purple-title">
               <i class="fa fa-book fa-fw w3-margin-right w3-xxlarge"></i>
@@ -163,9 +142,7 @@
                   Read the Full Paper Online
                 </a>
               </p>
-              <button onclick="showAbstract()" class="w3-button button-shaded w3-margin-top">
-                Abstract
-              </button>
+              <button onclick="showAbstract()" class="w3-button button-shaded w3-margin-top">Abstract</button>
               <div id="abstract" style="display:none; margin-top: 15px;">
                 <p>
                   A loot box is a probabilistic allocation of virtual products, the exact outcome of which is known to consumers only after purchase. Consumers sometimes purchase these goods multiple times until their preferred products are obtained. As loot boxes have been gaining enormous popularity in recent years, they are often criticized as exploitative and socially wasteful. In this study, we develop a stylized model to study the optimal design of loot boxes and its impact on profits and social welfare. We find that firms may assign asymmetric probabilities to ex ante symmetric products. Firms could use loot boxes to offer products at low prices to users who would not buy these products under the traditional pricing strategy. Loot boxes enable firms to earn higher profits due to better price discrimination and market expansion. Contrary to the widespread criticism of loot boxes as socially harmful, our analysis reveals that the loot box strategy can improve social welfare. Some platforms promise that consumers can obtain their preferred products with no more than a certain number of purchases. Contrary to conventional wisdom, our analysis reveals that such a strategy can increase firm’s profits while reducing consumer welfare.
@@ -175,7 +152,7 @@
             </div>
           </div>
           
-          <!-- Working Paper Section (kept purple) -->
+          <!-- Working Paper Section (titles in purple) -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-padding-16 purple-title">
               <i class="fa fa-file-alt fa-fw w3-margin-right w3-xxlarge"></i>
@@ -184,9 +161,7 @@
             <div class="w3-container">
               <p class="w3-opacity"><b>Pricing of Services: An Analysis of the Impact of Availability Bias</b></p>
               <p>Sanjay Jain, Jin Miao</p>
-              <button onclick="showWorkingPaperAbstract()" class="w3-button button-shaded w3-margin-top">
-                Abstract
-              </button>
+              <button onclick="showWorkingPaperAbstract()" class="w3-button button-shaded w3-margin-top">Abstract</button>
               <div id="working-paper-abstract" style="display:none; margin-top: 15px;">
                 <p>
                   Firms often offer subscriptions for services such as extended warranties for automobiles or appliances and subscription plans for golf or symphony. Before purchasing a subscription, consumers need to estimate the probability of needing the service in the future. Most of the prior research assumes that consumers form an unbiased estimate of their future needs. Empirical evidence, however, shows that consumers often make errors in predicting future needs. We draw on the literature on the availability bias (Tversky and Kahneman 1973) to model how consumers form subjective probabilities of needing the service. We then examine the optimal design of service contracts when the seller serves consumers influenced by the availability heuristic. We show that availability bias can lead firms to offer subscription plans with below marginal cost pricing at the time of service. Contrary to intuition, we find that availability bias can sometimes benefit consumers at the expense of firms. Furthermore, an increase in market-level bias can sometimes improve social welfare. Our results also demonstrate that availability bias can lead firms to provide socially wasteful services, where the service cost exceeds the valuation for all consumers. We also find that even perfect competition cannot eliminate the negative impact of availability bias.
@@ -265,13 +240,6 @@
               </div>
               <hr>
             </div>
-            
-            <script>
-              function toggleQuotes(divId) {
-                const quoteSection = document.getElementById(divId);
-                quoteSection.style.display = quoteSection.style.display === 'none' ? 'block' : 'none';
-              }
-            </script>
           </div>
           
           <!-- Awards Section -->
