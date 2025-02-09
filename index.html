@@ -82,6 +82,14 @@
         align-items: center;
         gap: 10px;
       }
+      
+      /* New class for profile description text */
+      .profile-description {
+        font-size: 24px;   /* Slightly larger font */
+        line-height: 1.5;  /* Increased line spacing */
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
     </style>
     
     <script>
@@ -103,12 +111,11 @@
   <body class="w3-light-grey">
     <!-- Page Container -->
     <div class="w3-content w3-margin-top" style="max-width:1400px;">
-      <!-- The Grid with adjusted column widths -->
+      <!-- The Grid: Reverted to original columns -->
       <div class="w3-row-padding">
-      
-        <!-- Left Column (Wider) -->
-        <div class="w3-col l7 m7 s12">
-          <!-- Profile Card -->
+        
+        <!-- Left Column (one-third width) -->
+        <div class="w3-third">
           <div class="w3-white w3-card-4">
             <div class="w3-display-container">
               <img src="./imgs/selfie.jpg" style="width:100%" alt="Avatar">
@@ -126,9 +133,8 @@
                   Curriculum Vitae
                 </button>
               </p>
-              <!-- <p><i class="fa-solid fa-phone fa-fw w3-margin-right w3-large"></i>1224435534</p> -->
               <hr>
-              <p class="w3-large">
+              <p class="profile-description">
                 Jin Miao is a Ph.D. candidate of quantitative marketing at the University of Texas at Dallas.
                 I use large language models and game‐theoretic models to study consumer behavior, market dynamics, and marketing strategies.
               </p>
@@ -157,8 +163,8 @@
           <!-- End Left Column -->
         </div>
         
-        <!-- Right Column (Narrower) -->
-        <div class="w3-col l5 m5 s12">
+        <!-- Right Column (two-thirds width) -->
+        <div class="w3-twothird">
           <!-- Publication Section (titles in purple) -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-padding-16 purple-title">
@@ -285,10 +291,10 @@
               Teaching Assistantship
             </h2>
             <div class="w3-container">
-              <p class="w3-opacity"><b>Marketing Analytics (MSBA Marketing Core)</b></p>
-              <p class="w3-opacity"><b>Social Media Marketing (BBA Marketing Elective)</b></p>
-              <p class="w3-opacity"><b>Marketing Management (BBA Marketing Elective)</b></p>
-              <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>            
+              <p class="w3-opacity">Marketing Analytics (MSBA Marketing Core)</p>
+              <p class="w3-opacity">Social Media Marketing (BBA Marketing Elective)</p>
+              <p class="w3-opacity">Marketing Management (BBA Marketing Elective)</p>
+              <p class="w3-opacity">Principles of Marketing (BBA Marketing Core)</p>            
               <hr>
             </div>
           </div>
