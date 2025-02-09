@@ -39,7 +39,7 @@
         color: #36013F !important;
       }
       
-      /* Link styling */
+      /* Link styling (for non-download links) */
       a:link,
       a:visited {
         color: black;
@@ -47,7 +47,7 @@
         text-decoration: underline;
       }
       
-      /* Button styling */
+      /* Button styling for downloads */
       .button-shaded {
         background-color: black;
         color: white;
@@ -101,9 +101,12 @@
               <p>
                 <i class="fa fa-envelope fa-fw w3-margin-right w3-large"></i>Jin.Miao@utdallas.edu
               </p>
+              <!-- Download CV Button -->
               <p>
                 <i class="fa fa-file-pdf fa-fw w3-margin-right w3-large"></i>
-                <a href="https://jinmiaomkt.github.io/doc/Jin%20Miao%20CV%20Feb%202025.pdf" target="_blank">View My CV</a>
+                <button class="w3-button button-shaded" onclick="window.open('https://jinmiaomkt.github.io/doc/Jin%20Miao%20CV%20Feb%202025.pdf', '_blank')">
+                  Click Here to Download CV
+                </button>
               </p>
               <!-- <p><i class="fa fa-phone fa-fw w3-margin-right w3-large"></i>1224435534</p> -->
               <hr>
@@ -186,11 +189,12 @@
                 <i class="fa fa-calendar fa-fw w3-margin-right"></i> Fall 2024
               </p>
               <p>Class Size: 56, Teaching Evaluation: 5.00/5.00</p>
+              <!-- Download Teaching Evaluation Form (Fall 2024) -->
               <p>
                 <i class="fa fa-file-pdf fa-fw w3-margin-right"></i>
-                <a href="/doc/Jin%20Miao%20Teaching%20Evaluation%20F24.pdf" target="_blank">
-                  Official Teaching Evaluation Form
-                </a>
+                <button class="w3-button button-shaded" onclick="window.open('/doc/Jin%20Miao%20Teaching%20Evaluation%20F24.pdf', '_blank')">
+                  Click Here to Download Teaching Evaluation Form (Fall 2024)
+                </button>
               </p>
               <button onclick="toggleQuotes('quotes2')" class="w3-button button-shaded w3-margin-top">
                 Quotes from anonymous student evaluation forms
@@ -222,11 +226,12 @@
                 <i class="fa fa-calendar fa-fw w3-margin-right"></i> Fall 2023
               </p>
               <p>Class Size: 49, Teaching Evaluation: 4.79/5.00</p>
+              <!-- Download Teaching Evaluation Form (Fall 2023) -->
               <p>
                 <i class="fa fa-file-pdf fa-fw w3-margin-right"></i>
-                <a href="/doc/Jin%20Miao%20Teaching%20Eval.pdf" target="_blank">
-                  Official Teaching Evaluation Form
-                </a>
+                <button class="w3-button button-shaded" onclick="window.open('/doc/Jin%20Miao%20Teaching%20Eval.pdf', '_blank')">
+                  Click Here to Download Teaching Evaluation Form (Fall 2023)
+                </button>
               </p>
               <button onclick="toggleQuotes('quotes1')" class="w3-button button-shaded w3-margin-top">
                 Quotes from anonymous student evaluation forms
