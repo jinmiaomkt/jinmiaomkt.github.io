@@ -40,8 +40,13 @@
         background-color: black !important;
       }
       
-      /* Special styling for Publication and Working Paper titles */
-      h2.purple-title {
+      /* Special styling for headings that must be purple */
+      .purple-title {
+        color: #36013F !important;
+      }
+      
+      /* New class for purple text on specific text components */
+      .purple-text {
         color: #36013F !important;
       }
       
@@ -76,14 +81,14 @@
         outline: none;
       }
       
-      /* New class to align buttons side-by-side */
+      /* Class to align buttons side-by-side */
       .aligned-buttons {
         display: flex;
         align-items: center;
         gap: 10px;
       }
       
-      /* New class for profile description text */
+      /* Class for profile description text with increased font size and spacing */
       .profile-description {
         font-size: 24px;   /* Slightly larger font */
         line-height: 1.5;  /* Increased line spacing */
@@ -111,10 +116,10 @@
   <body class="w3-light-grey">
     <!-- Page Container -->
     <div class="w3-content w3-margin-top" style="max-width:1400px;">
-      <!-- The Grid: Reverted to original columns -->
+      <!-- The Grid (original layout: left column one‑third, right column two‑thirds) -->
       <div class="w3-row-padding">
         
-        <!-- Left Column (one-third width) -->
+        <!-- Left Column -->
         <div class="w3-third">
           <div class="w3-white w3-card-4">
             <div class="w3-display-container">
@@ -141,7 +146,7 @@
               <hr>
               <!-- Awards Section (No Bold Font) -->
               <div class="w3-container w3-card w3-white w3-margin-bottom">
-                <h2 class="w3-padding-16">
+                <h2 class="w3-padding-16 purple-title">
                   <i class="fa-solid fa-trophy fa-fw w3-margin-right w3-xxlarge"></i>
                   Awards
                 </h2>
@@ -163,22 +168,22 @@
           <!-- End Left Column -->
         </div>
         
-        <!-- Right Column (two-thirds width) -->
+        <!-- Right Column -->
         <div class="w3-twothird">
-          <!-- Publication Section (titles in purple) -->
+          <!-- Publication Section -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-padding-16 purple-title">
               <i class="fa-solid fa-book fa-fw w3-margin-right w3-xxlarge"></i>
               Publication
             </h2>
             <div class="w3-container">
-              <p class="w3-opacity"><b>Designing Loot Boxes: Implications for Profits and Welfare</b></p>
+              <p class="w3-opacity purple-text"><b>Designing Loot Boxes: Implications for Profits and Welfare</b></p>
               <p>Jin Miao, Sanjay Jain</p>
-              <p>
+              <p class="purple-text">
                 Marketing Science (2024) vol. 43, no. 6, pp. 1242–1259.
               </p>
               <p>
-                <a href="https://pubsonline.informs.org/doi/10.1287/mksc.2023.0007" class="no-underline">
+                <a href="https://pubsonline.informs.org/doi/10.1287/mksc.2023.0007" class="no-underline purple-text">
                   <i class="fa-solid fa-up-right-from-square fa-fw w3-margin-right"></i>
                   Read the Full Paper Online
                 </a>
@@ -193,15 +198,15 @@
             </div>
           </div>
           
-          <!-- Working Paper Section (titles in purple) -->
+          <!-- Working Paper Section -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-padding-16 purple-title">
               <i class="fa-solid fa-file-lines fa-fw w3-margin-right w3-xxlarge"></i>
               Working Paper
             </h2>
             <div class="w3-container">
-              <p class="w3-opacity"><b>Pricing of Services: An Analysis of the Impact of Availability Bias</b></p>
-              <p>Sanjay Jain, Jin Miao</p>
+              <p class="w3-opacity purple-text"><b>Pricing of Services: An Analysis of the Impact of Availability Bias</b></p>
+              <p class="purple-text">Sanjay Jain, Jin Miao</p>
               <button onclick="showWorkingPaperAbstract()" class="w3-button button-shaded w3-margin-top">Abstract</button>
               <div id="working-paper-abstract" style="display:none; margin-top: 15px;">
                 <p>
@@ -214,20 +219,20 @@
           
           <!-- Teaching Experience Section -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-padding-16">
+            <h2 class="w3-padding-16 purple-title">
               <i class="fa-solid fa-heart fa-fw w3-margin-right w3-xxlarge"></i>
               Teaching Experience
             </h2>
             <!-- 2nd Course Section (Fall 2024) -->
             <div class="w3-container">
-              <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>
+              <p class="w3-opacity purple-text"><b>Principles of Marketing (BBA Marketing Core)</b></p>
               <p>
                 <i class="fa-solid fa-building fa-fw w3-margin-right"></i>Solo Instructor
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <i class="fa-solid fa-calendar fa-fw w3-margin-right"></i> Fall 2024
               </p>
-              <p>Class Size: 56, Teaching Evaluation: 5.00/5.00</p>
-              <p>Outstanding Teaching Award</p>
+              <p class="purple-text">Class Size: 56, Teaching Evaluation: 5.00/5.00</p>
+              <p class="purple-text">Outstanding Teaching Award</p>
               <!-- Aligned buttons for Fall 2024 -->
               <div class="aligned-buttons">
                 <button class="w3-button button-shaded" onclick="window.open('/doc/Jin%20Miao%20Teaching%20Evaluation%20F24.pdf', '_blank')">
@@ -257,13 +262,13 @@
             
             <!-- 1st Course Section (Fall 2023) -->
             <div class="w3-container">
-              <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>
+              <p class="w3-opacity purple-text"><b>Principles of Marketing (BBA Marketing Core)</b></p>
               <p>
                 <i class="fa-solid fa-building fa-fw w3-margin-right"></i>Solo Instructor
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <i class="fa-solid fa-calendar fa-fw w3-margin-right"></i> Fall 2023
               </p>
-              <p>Class Size: 49, Teaching Evaluation: 4.79/5.00</p>
+              <p class="purple-text">Class Size: 49, Teaching Evaluation: 4.79/5.00</p>
               <!-- Aligned buttons for Fall 2023 -->
               <div class="aligned-buttons">
                 <button class="w3-button button-shaded" onclick="window.open('/doc/Jin%20Miao%20Teaching%20Eval.pdf', '_blank')">
@@ -286,15 +291,15 @@
           
           <!-- Teaching Assistantship Section -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-padding-16">
+            <h2 class="w3-padding-16 purple-title">
               <i class="fa-solid fa-chalkboard-teacher fa-fw w3-margin-right w3-xxlarge"></i>
               Teaching Assistantship
             </h2>
             <div class="w3-container">
-              <p class="w3-opacity">Marketing Analytics (MSBA Marketing Core)</p>
-              <p class="w3-opacity">Social Media Marketing (BBA Marketing Elective)</p>
-              <p class="w3-opacity">Marketing Management (BBA Marketing Elective)</p>
-              <p class="w3-opacity">Principles of Marketing (BBA Marketing Core)</p>            
+              <p class="w3-opacity purple-text"><b>Marketing Analytics (MSBA Marketing Core)</b></p>
+              <p class="w3-opacity purple-text"><b>Social Media Marketing (BBA Marketing Elective)</b></p>
+              <p class="w3-opacity purple-text"><b>Marketing Management (BBA Marketing Elective)</b></p>
+              <p class="w3-opacity purple-text"><b>Principles of Marketing (BBA Marketing Core)</b></p>            
               <hr>
             </div>
           </div>
@@ -305,7 +310,7 @@
       <!-- End Page Container -->
     </div>
     
-    <footer class="w3-container w3-center w3-margin-top" style="background-color: black; color: white;">
+    <footer class="w3-container w3-center w3-margin-top" style="background-color: white; color: white;">
       <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" style="color: white;">w3.css</a></p>
     </footer>
     
