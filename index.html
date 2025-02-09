@@ -15,31 +15,54 @@
       /* Reduce line spacing for paragraphs and list items */
       html, body, p, li {
         line-height: 1.3;
-        font-family: "Roboto", sans-serif;
-        color: black; /* Ensure uniform text color */
       }
       
-      /* Increase font size for section titles */
+      /* Base styles: larger font & default black text */
+      html, body, h1, h2, h3, h4, h5, h6, p, a {
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        color: black;
+      }
+      
+      /* Increase the font size for all section titles */
       h2 {
         font-size: 28px;
-        font-family: "Roboto", sans-serif;
       }
-
-      /* Special styling for section titles (Purple) */
+      
+      /* Override W3.CSS primary classes to use black */
+      .w3-text-primary {
+        color: black !important;
+      }
+      .w3-border-primary {
+        border-color: black !important;
+      }
+      .w3-background-primary {
+        background-color: black !important;
+      }
+      
+      /* Special styling for headings that must be purple */
       .purple-title {
         color: #36013F !important;
       }
       
-      /* Purple-colored text */
+      /* New class for purple text on specific text components */
       .purple-text {
         color: #36013F !important;
       }
-
-      /* Override text color for Teaching Assistantship contents */
-      .black-text {
-        color: black !important;
+      
+      /* Link styling (for non-download links) */
+      a:link,
+      a:visited {
+        color: black;
+        background-color: transparent;
+        text-decoration: underline;
       }
-
+      
+      /* Custom class to remove underline from specific links */
+      .no-underline {
+        text-decoration: none !important;
+      }
+      
       /* Button styling for downloads */
       .button-shaded {
         background-color: black;
@@ -65,7 +88,7 @@
         gap: 10px;
       }
       
-      /* Profile description text (increased font and spacing) */
+      /* Class for profile description text with increased font size and spacing */
       .profile-description {
         font-size: 24px;   /* Slightly larger font */
         line-height: 1.5;  /* Increased line spacing */
@@ -73,12 +96,27 @@
         margin-bottom: 10px;
       }
     </style>
+    
+    <script>
+      function showAbstract() {
+        var abstract = document.getElementById("abstract");
+        abstract.style.display = abstract.style.display === "none" ? "block" : "none";
+      }
+      function showWorkingPaperAbstract() {
+        var abstract = document.getElementById("working-paper-abstract");
+        abstract.style.display = abstract.style.display === "none" ? "block" : "none";
+      }
+      function toggleQuotes(divId) {
+        const quoteSection = document.getElementById(divId);
+        quoteSection.style.display = quoteSection.style.display === 'none' ? 'block' : 'none';
+      }
+    </script>
   </head>
   
   <body class="w3-light-grey">
     <!-- Page Container -->
     <div class="w3-content w3-margin-top" style="max-width:1400px;">
-      <!-- The Grid -->
+      <!-- The Grid (original layout: left column one‑third, right column two‑thirds) -->
       <div class="w3-row-padding">
         
         <!-- Left Column -->
@@ -106,43 +144,32 @@
                 I use large language models and game‐theoretic models to study consumer behavior, market dynamics, and marketing strategies.
               </p>
               <hr>
-
-              <!-- Awards Section (merged into left column) -->
-              <h2 class="purple-title">
-                <i class="fa-solid fa-trophy fa-fw w3-margin-right w3-xxlarge"></i>
-                Awards
-              </h2>
-              <p>ISMS Doctoral Dissertation Early Stage Grant, Finalist</p>
-              <p>Outstanding Teaching Award</p>
-              <p>AMA-Sheth Foundation Doctoral Consortium Fellow</p>
-              <p>Betty and Gifford Johnson Travel Awards</p>
-              <p>Nomination for President’s Teaching Excellence Awards</p>
-              <p>Graduate Student Assembly Travel Award</p>
-              <p>Academic Excellence Scholarship, Tsinghua University</p>
-              <p>Baden-Württemberg-Stipendium, Mannheim University</p>
-              <hr>
+              <!-- Awards Section (No Bold Font) -->
+              <div class="w3-container w3-card w3-white w3-margin-bottom">
+                <h2 class="w3-padding-16 purple-title">
+                  <i class="fa-solid fa-trophy fa-fw w3-margin-right w3-xxlarge"></i>
+                  Awards
+                </h2>
+                <div class="w3-container">
+                  <p class="w3-opacity">ISMS Doctoral Dissertation Early Stage Grant, Finalist</p>
+                  <p class="w3-opacity">Outstanding Teaching Award</p>
+                  <p class="w3-opacity">AMA-Sheth Foundation Doctoral Consortium Fellow</p>
+                  <p class="w3-opacity">Betty and Gifford Johnson Travel Awards</p>
+                  <p class="w3-opacity">Nomination for President’s Teaching Excellence Awards</p>
+                  <p class="w3-opacity">Graduate Student Assembly Travel Award</p>
+                  <p class="w3-opacity">Academic Excellence Scholarship, Tsinghua University</p>
+                  <p class="w3-opacity">Baden-Württemberg-Stipendium, Mannheim University</p>
+                  <hr>
+                </div>
+              </div>
             </div>
           </div>
           <br>
+          <!-- End Left Column -->
         </div>
         
         <!-- Right Column -->
         <div class="w3-twothird">
-          <!-- Teaching Assistantship Section (Now with black text) -->
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-padding-16 purple-title">
-              <i class="fa-solid fa-chalkboard-teacher fa-fw w3-margin-right w3-xxlarge"></i>
-              Teaching Assistantship
-            </h2>
-            <div class="w3-container black-text">
-              <p>Marketing Analytics (MSBA Marketing Core)</p>
-              <p>Social Media Marketing (BBA Marketing Elective)</p>
-              <p>Marketing Management (BBA Marketing Elective)</p>
-              <p>Principles of Marketing (BBA Marketing Core)</p>            
-              <hr>
-            </div>
-          </div>
-          
           <!-- Publication Section -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-padding-16 purple-title">
@@ -150,23 +177,142 @@
               Publication
             </h2>
             <div class="w3-container">
-              <p class="purple-text"><b>Designing Loot Boxes: Implications for Profits and Welfare</b></p>
+              <p class="w3-opacity purple-text"><b>Designing Loot Boxes: Implications for Profits and Welfare</b></p>
               <p>Jin Miao, Sanjay Jain</p>
-              <p>
+              <p class="purple-text">
                 Marketing Science (2024) vol. 43, no. 6, pp. 1242–1259.
               </p>
               <p>
                 <a href="https://pubsonline.informs.org/doi/10.1287/mksc.2023.0007" class="no-underline purple-text">
+                  <i class="fa-solid fa-up-right-from-square fa-fw w3-margin-right"></i>
                   Read the Full Paper Online
                 </a>
               </p>
+              <button onclick="showAbstract()" class="w3-button button-shaded w3-margin-top">Abstract</button>
+              <div id="abstract" style="display:none; margin-top: 15px;">
+                <p>
+                  A loot box is a probabilistic allocation of virtual products, the exact outcome of which is known to consumers only after purchase. Consumers sometimes purchase these goods multiple times until their preferred products are obtained. As loot boxes have been gaining enormous popularity in recent years, they are often criticized as exploitative and socially wasteful. In this study, we develop a stylized model to study the optimal design of loot boxes and its impact on profits and social welfare. We find that firms may assign asymmetric probabilities to ex ante symmetric products. Firms could use loot boxes to offer products at low prices to users who would not buy these products under the traditional pricing strategy. Loot boxes enable firms to earn higher profits due to better price discrimination and market expansion. Contrary to the widespread criticism of loot boxes as socially harmful, our analysis reveals that the loot box strategy can improve social welfare. Some platforms promise that consumers can obtain their preferred products with no more than a certain number of purchases. Contrary to conventional wisdom, our analysis reveals that such a strategy can increase firm’s profits while reducing consumer welfare.
+                </p>
+              </div>
               <hr>
             </div>
           </div>
-
+          
+          <!-- Working Paper Section -->
+          <div class="w3-container w3-card w3-white w3-margin-bottom">
+            <h2 class="w3-padding-16 purple-title">
+              <i class="fa-solid fa-file-lines fa-fw w3-margin-right w3-xxlarge"></i>
+              Working Paper
+            </h2>
+            <div class="w3-container">
+              <p class="w3-opacity purple-text"><b>Pricing of Services: An Analysis of the Impact of Availability Bias</b></p>
+              <p class="purple-text">Sanjay Jain, Jin Miao</p>
+              <button onclick="showWorkingPaperAbstract()" class="w3-button button-shaded w3-margin-top">Abstract</button>
+              <div id="working-paper-abstract" style="display:none; margin-top: 15px;">
+                <p>
+                  Firms often offer subscriptions for services such as extended warranties for automobiles or appliances and subscription plans for golf or symphony. Before purchasing a subscription, consumers need to estimate the probability of needing the service in the future. Most of the prior research assumes that consumers form an unbiased estimate of their future needs. Empirical evidence, however, shows that consumers often make errors in predicting future needs. We draw on the literature on the availability bias (Tversky and Kahneman 1973) to model how consumers form subjective probabilities of needing the service. We then examine the optimal design of service contracts when the seller serves consumers influenced by the availability heuristic. We show that availability bias can lead firms to offer subscription plans with below marginal cost pricing at the time of service. Contrary to intuition, we find that availability bias can sometimes benefit consumers at the expense of firms. Furthermore, an increase in market-level bias can sometimes improve social welfare. Our results also demonstrate that availability bias can lead firms to provide socially wasteful services, where the service cost exceeds the valuation for all consumers. We also find that even perfect competition cannot eliminate the negative impact of availability bias.
+                </p>
+              </div>
+              <hr>
+            </div>
+          </div>
+          
+          <!-- Teaching Experience Section -->
+          <div class="w3-container w3-card w3-white w3-margin-bottom">
+            <h2 class="w3-padding-16 purple-title">
+              <i class="fa-solid fa-heart fa-fw w3-margin-right w3-xxlarge"></i>
+              Teaching Experience
+            </h2>
+            <!-- 2nd Course Section (Fall 2024) -->
+            <div class="w3-container">
+              <p class="w3-opacity purple-text"><b>Principles of Marketing (BBA Marketing Core)</b></p>
+              <p>
+                <i class="fa-solid fa-building fa-fw w3-margin-right"></i>Solo Instructor
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-calendar fa-fw w3-margin-right"></i> Fall 2024
+              </p>
+              <p class="purple-text">Class Size: 56, Teaching Evaluation: 5.00/5.00</p>
+              <p class="purple-text">Outstanding Teaching Award</p>
+              <!-- Aligned buttons for Fall 2024 -->
+              <div class="aligned-buttons">
+                <button class="w3-button button-shaded" onclick="window.open('/doc/Jin%20Miao%20Teaching%20Evaluation%20F24.pdf', '_blank')">
+                  Official Report                
+                </button>
+                <button onclick="toggleQuotes('quotes2')" class="w3-button button-shaded">
+                  Anonymous Student Feedback
+                </button>
+              </div>
+              <div id="quotes2" style="display:none; margin-top: 15px;">
+                <ul>
+                  <li>I genuinely like the structure of the course, with each element of the course being split up and combined at the end. It helps students not only see progression but also how everything they learned simultaneously comes together in marketing.</li>
+                  <li>Great class! I learned a lot and was able to grasp marketing a lot better than I originally anticipated after completing the course.</li>
+                  <li>Everything in this course was great. The exams were a bit challenging, especially the math portions for the final exam but other than that, this class was a pleasure to take. Thank you!</li>
+                  <li>The prof is great and the way that he teaches makes everything easy to understand.</li>
+                  <li>The course overall was high in terms of memorability, personally. I would suggest feeling more comfortable with the class, which would reciprocate with the class feeling more comfortable as well. You are incredibly knowledgeable, and I can rely on your responses to satisfy questions regarding key concepts and requirements, if needed. I am overall very happy with how the semester came to be, and it is very bittersweet to meet the end of it. Best of luck!</li>
+                  <li>I am very satisfied with my experience in this course. The professor was excellent—knowledgeable, approachable, and always willing to help. The assignments, homework, and tests were fair and aligned well with the material covered in class. Overall, it was a great learning experience, and I wouldn’t change anything.</li>
+                </ul>
+              </div>
+              <hr>
+            </div>
+            
+            <!-- Group Photo -->
+            <div class="w3-margin-top">
+              <img src="./imgs/GroupPhotoMKT3300F24.jpg" alt="Group Photo MKT 3300 Fall 2024" style="max-width: 500px; width: 100%;">
+            </div>
+            
+            <!-- 1st Course Section (Fall 2023) -->
+            <div class="w3-container">
+              <p class="w3-opacity purple-text"><b>Principles of Marketing (BBA Marketing Core)</b></p>
+              <p>
+                <i class="fa-solid fa-building fa-fw w3-margin-right"></i>Solo Instructor
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-calendar fa-fw w3-margin-right"></i> Fall 2023
+              </p>
+              <p class="purple-text">Class Size: 49, Teaching Evaluation: 4.79/5.00</p>
+              <!-- Aligned buttons for Fall 2023 -->
+              <div class="aligned-buttons">
+                <button class="w3-button button-shaded" onclick="window.open('/doc/Jin%20Miao%20Teaching%20Eval.pdf', '_blank')">
+                  Official Report
+                </button>
+                <button onclick="toggleQuotes('quotes1')" class="w3-button button-shaded">
+                  Anonymous Student Feedback
+                </button>
+              </div>
+              <div id="quotes1" style="display:none; margin-top: 15px;">
+                <ul>
+                  <li>Professor was amazing and always willing to listen to questions and concerns. Her knowledge and understanding of the material was outstanding and overall a well-made class.</li>
+                  <li>Just about everything Professor Miao went over is very applicable to the world of marketing, I believe he did a good job overall.</li>
+                  <li>He is a really kind and well-spoken professor, topics were well explained and assignments are clear and easy to find. I fairly enjoyed the class and would highly recommend.</li>
+                </ul>
+              </div>
+              <hr>
+            </div>
+          </div>
+          
+          <!-- Teaching Assistantship Section -->
+          <div class="w3-container w3-card w3-white w3-margin-bottom">
+            <h2 class="w3-padding-16 purple-title">
+              <i class="fa-solid fa-chalkboard-teacher fa-fw w3-margin-right w3-xxlarge"></i>
+              Teaching Assistantship
+            </h2>
+            <div class="w3-container">
+              <p class="w3-opacity purple-text"><b>Marketing Analytics (MSBA Marketing Core)</b></p>
+              <p class="w3-opacity purple-text"><b>Social Media Marketing (BBA Marketing Elective)</b></p>
+              <p class="w3-opacity purple-text"><b>Marketing Management (BBA Marketing Elective)</b></p>
+              <p class="w3-opacity purple-text"><b>Principles of Marketing (BBA Marketing Core)</b></p>            
+              <hr>
+            </div>
+          </div>
+          <!-- End Right Column -->
         </div>
+        <!-- End Grid -->
       </div>
+      <!-- End Page Container -->
     </div>
-
+    
+    <footer class="w3-container w3-center w3-margin-top" style="background-color: black; color: white;">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" style="color: white;">w3.css</a></p>
+    </footer>
+    
   </body>
 </html>
