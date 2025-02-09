@@ -52,7 +52,7 @@
         text-decoration: underline;
       }
       
-      /* Custom class to remove underline */
+      /* Custom class to remove underline from specific links */
       .no-underline {
         text-decoration: none !important;
       }
@@ -73,6 +73,18 @@
       }
       .button-shaded:focus {
         outline: none;
+      }
+      
+      /* New class to align buttons side-by-side */
+      .aligned-buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      /* New class to force text color to black */
+      .black-text {
+        color: black !important;
       }
     </style>
     
@@ -117,17 +129,35 @@
                   Curriculum Vitae
                 </button>
               </p>
-              <!-- <p><i class="fa fa-phone fa-fw w3-margin-right w3-large"></i>1224435534</p> -->
               <hr>
               <p class="w3-large">
                 Jin Miao is a Ph.D. candidate of quantitative marketing at the University of Texas at Dallas.
                 I use large language models and game‐theoretic models to study consumer behavior, market dynamics, and marketing strategies.
               </p>
               <hr>
-              <!-- Research Interests and Teaching Interests sections have been removed -->
             </div>
           </div>
           <br>
+          <!-- Awards Section moved to left column -->
+          <div class="w3-white w3-card-4">
+            <div class="w3-container">
+              <h2 class="w3-padding-16">
+                <i class="fa fa-trophy fa-fw w3-margin-right w3-xxlarge"></i>
+                Awards
+              </h2>
+              <div class="w3-container">
+                <p class="black-text"><b>ISMS Doctoral Dissertation Early Stage Grant, Finalist</b></p>
+                <p class="black-text"><b>Outstanding Teaching Award</b></p>
+                <p class="black-text"><b>AMA-Sheth Foundation Doctoral Consortium Fellow</b></p>
+                <p class="black-text"><b>Betty and Gifford Johnson Travel Awards</b></p>
+                <p class="black-text"><b>Nomination for President’s Teaching Excellence Awards</b></p>
+                <p class="black-text"><b>Graduate Student Assembly Travel Award</b></p>
+                <p class="black-text"><b>Academic Excellence Scholarship, Tsinghua University</b></p>
+                <p class="black-text"><b>Baden-Württemberg-Stipendium, Mannheim University</b></p>
+                <hr>
+              </div>
+            </div>
+          </div>
           <!-- End Left Column -->
         </div>
         
@@ -142,11 +172,11 @@
             <div class="w3-container">
               <p class="w3-opacity"><b>Designing Loot Boxes: Implications for Profits and Welfare</b></p>
               <p>Jin Miao, Sanjay Jain</p>
+              <!-- Place the icon and text on the same line to avoid stray underscores -->
               <p>
                 <a href="https://pubsonline.informs.org/doi/10.1287/mksc.2023.0007">
-                  <i class="fa fa-file-pdf fa-fw w3-margin-right"></i>
-                </a>
-                Marketing Science (2024) vol. 43, no. 6, pp. 1242–1259.
+                  <i class="fa fa-file-pdf fa-fw" style="margin-right:10px;"></i>
+                </a>Marketing Science (2024) vol. 43, no. 6, pp. 1242–1259.
               </p>
               <p>
                 <a href="https://pubsonline.informs.org/doi/10.1287/mksc.2023.0007" class="no-underline">
@@ -189,7 +219,7 @@
               <i class="fa fa-heart fa-fw w3-margin-right w3-xxlarge"></i>
               Teaching Experience
             </h2>
-            <!-- 2nd Course Section -->
+            <!-- 2nd Course Section (Fall 2024) -->
             <div class="w3-container">
               <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>
               <p>
@@ -199,22 +229,22 @@
               </p>
               <p>Class Size: 56, Teaching Evaluation: 5.00/5.00</p>
               <p>Outstanding Teaching Award</p>
-              <!-- Download Teaching Evaluation Form (Fall 2024) -->
-              <p>
+              <!-- Aligned buttons for Fall 2024 -->
+              <div class="aligned-buttons">
                 <button class="w3-button button-shaded" onclick="window.open('/doc/Jin%20Miao%20Teaching%20Evaluation%20F24.pdf', '_blank')">
                   Official Report                
                 </button>
-                <button onclick="toggleQuotes('quotes2')" class="w3-button button-shaded w3-margin-top">
+                <button onclick="toggleQuotes('quotes2')" class="w3-button button-shaded">
                   Anonymous Student Feedback
                 </button>
-              </p>
+              </div>
               <div id="quotes2" style="display:none; margin-top: 15px;">
                 <ul>
                   <li>I genuinely like the structure of the course, with each element of the course being split up and combined at the end. It helps students not only see progression but also how everything they learned simultaneously comes together in marketing.</li>
                   <li>Great class! I learned a lot and was able to grasp marketing a lot better than I originally anticipated after completing the course.</li>
                   <li>Everything in this course was great. The exams were a bit challenging, especially the math portions for the final exam but other than that, this class was a pleasure to take. Thank you!</li>
                   <li>The prof is great and the way that he teaches makes everything easy to understand.</li>
-                  <li>The course overall was high in terms of memorability, personally. I would suggest feeling more comfortable with the class, which would reciprocate with the class feeling more comfortable as well. You are incredibly knowledgable, and I can rely on your responses to satisfy questions regarding key concepts and requirements, if needed. I am overall very happy with how the semester came to be, and it is very bittersweet to meet the end of it. Best of luck!</li>
+                  <li>The course overall was high in terms of memorability, personally. I would suggest feeling more comfortable with the class, which would reciprocate with the class feeling more comfortable as well. You are incredibly knowledgeable, and I can rely on your responses to satisfy questions regarding key concepts and requirements, if needed. I am overall very happy with how the semester came to be, and it is very bittersweet to meet the end of it. Best of luck!</li>
                   <li>I am very satisfied with my experience in this course. The professor was excellent—knowledgeable, approachable, and always willing to help. The assignments, homework, and tests were fair and aligned well with the material covered in class. Overall, it was a great learning experience, and I wouldn’t change anything.</li>
                 </ul>
               </div>
@@ -226,7 +256,7 @@
               <img src="./imgs/GroupPhotoMKT3300F24.jpg" alt="Group Photo MKT 3300 Fall 2024" style="max-width: 500px; width: 100%;">
             </div>
             
-            <!-- 1st Course Section -->
+            <!-- 1st Course Section (Fall 2023) -->
             <div class="w3-container">
               <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>
               <p>
@@ -235,15 +265,15 @@
                 <i class="fa fa-calendar fa-fw w3-margin-right"></i> Fall 2023
               </p>
               <p>Class Size: 49, Teaching Evaluation: 4.79/5.00</p>
-              <!-- Download Teaching Evaluation Form (Fall 2023) -->
-              <p>
+              <!-- Aligned buttons for Fall 2023 -->
+              <div class="aligned-buttons">
                 <button class="w3-button button-shaded" onclick="window.open('/doc/Jin%20Miao%20Teaching%20Eval.pdf', '_blank')">
                   Official Report
                 </button>
-                <button onclick="toggleQuotes('quotes1')" class="w3-button button-shaded w3-margin-top">
+                <button onclick="toggleQuotes('quotes1')" class="w3-button button-shaded">
                   Anonymous Student Feedback
                 </button>
-              </p>
+              </div>
               <div id="quotes1" style="display:none; margin-top: 15px;">
                 <ul>
                   <li>Professor was amazing and always willing to listen to questions and concerns. Her knowledge and understanding of the material was outstanding and overall a well-made class.</li>
@@ -251,40 +281,6 @@
                   <li>He is a really kind and well-spoken professor, topics were well explained and assignments are clear and easy to find. I fairly enjoyed the class and would highly recommend.</li>
                 </ul>
               </div>
-              <hr>
-            </div>
-          </div>
-          
-          <!-- Awards Section -->
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-padding-16">
-              <i class="fa fa-trophy fa-fw w3-margin-right w3-xxlarge"></i>
-              Awards
-            </h2>
-            <div class="w3-container">
-              <p class="w3-opacity"><b>ISMS Doctoral Dissertation Early Stage Grant, Finalist</b></p>
-              <p class="w3-opacity"><b>Outstanding Teaching Award</b></p>
-              <p class="w3-opacity"><b>AMA-Sheth Foundation Doctoral Consortium Fellow</b></p>
-              <p class="w3-opacity"><b>Betty and Gifford Johnson Travel Awards</b></p>
-              <p class="w3-opacity"><b>Nomination for President’s Teaching Excellence Awards</b></p>
-              <p class="w3-opacity"><b>Graduate Student Assembly Travel Award</b></p>
-              <p class="w3-opacity"><b>Academic Excellence Scholarship, Tsinghua University</b></p>
-              <p class="w3-opacity"><b>Baden-Württemberg-Stipendium, Mannheim University</b></p>
-              <hr>
-            </div>
-          </div>
-          
-          <!-- Teaching Assistantship Section -->
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-padding-16">
-              <i class="fa fa-chalkboard-teacher fa-fw w3-margin-right w3-xxlarge"></i>
-              Teaching Assistantship
-            </h2>
-            <div class="w3-container">
-              <p class="w3-opacity"><b>Marketing Analytics (MSBA Marketing Core)</b></p>
-              <p class="w3-opacity"><b>Social Media Marketing (BBA Marketing Elective)</b></p>
-              <p class="w3-opacity"><b>Marketing Management (BBA Marketing Elective)</b></p>
-              <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>            
               <hr>
             </div>
           </div>
