@@ -7,6 +7,7 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!-- Using the latest Font Awesome 6.4.0 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Revised Styles -->
@@ -81,16 +82,6 @@
         align-items: center;
         gap: 10px;
       }
-      
-      /* New class to force text color to purple */
-      .purple-text {
-        color: #36013F !important;
-      }
-      
-      /* New class to force text color to black */
-      .black-text {
-        color: black !important;
-      }
     </style>
     
     <script>
@@ -123,10 +114,10 @@
             </div>
             <div class="w3-container">
               <p>
-                <i class="fa fa-home fa-fw w3-margin-right w3-large"></i>Richardson, TX
+                <i class="fa-solid fa-house fa-fw w3-margin-right w3-large"></i>Richardson, TX
               </p>
               <p>
-                <i class="fa fa-envelope fa-fw w3-margin-right w3-large"></i>Jin.Miao@utdallas.edu
+                <i class="fa-solid fa-envelope fa-fw w3-margin-right w3-large"></i>Jin.Miao@utdallas.edu
               </p>
               <!-- Download CV Button -->
               <p>
@@ -134,35 +125,17 @@
                   Curriculum Vitae
                 </button>
               </p>
+              <!-- <p><i class="fa-solid fa-phone fa-fw w3-margin-right w3-large"></i>1224435534</p> -->
               <hr>
               <p class="w3-large">
                 Jin Miao is a Ph.D. candidate of quantitative marketing at the University of Texas at Dallas.
                 I use large language models and game‐theoretic models to study consumer behavior, market dynamics, and marketing strategies.
               </p>
               <hr>
+              <!-- Research Interests and Teaching Interests sections have been removed -->
             </div>
           </div>
           <br>
-          <!-- Awards Section moved to left column -->
-          <div class="w3-white w3-card-4">
-            <div class="w3-container">
-              <h2 class="w3-padding-16">
-                <i class="fa fa-trophy fa-fw w3-margin-right w3-xxlarge"></i>
-                Awards
-              </h2>
-              <div class="w3-container">
-                <p class="black-text"><b>ISMS Doctoral Dissertation Early Stage Grant, Finalist</b></p>
-                <p class="black-text"><b>Outstanding Teaching Award</b></p>
-                <p class="black-text"><b>AMA-Sheth Foundation Doctoral Consortium Fellow</b></p>
-                <p class="black-text"><b>Betty and Gifford Johnson Travel Awards</b></p>
-                <p class="black-text"><b>Nomination for President’s Teaching Excellence Awards</b></p>
-                <p class="black-text"><b>Graduate Student Assembly Travel Award</b></p>
-                <p class="black-text"><b>Academic Excellence Scholarship, Tsinghua University</b></p>
-                <p class="black-text"><b>Baden-Württemberg-Stipendium, Mannheim University</b></p>
-                <hr>
-              </div>
-            </div>
-          </div>
           <!-- End Left Column -->
         </div>
         
@@ -171,22 +144,21 @@
           <!-- Publication Section (titles in purple) -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-padding-16 purple-title">
-              <i class="fa fa-book fa-fw w3-margin-right w3-xxlarge"></i>
+              <i class="fa-solid fa-book fa-fw w3-margin-right w3-xxlarge"></i>
               Publication
             </h2>
             <div class="w3-container">
-              <!-- Publication title changed to purple -->
-              <p class="w3-opacity purple-text"><b>Designing Loot Boxes: Implications for Profits and Welfare</b></p>
+              <p class="w3-opacity"><b>Designing Loot Boxes: Implications for Profits and Welfare</b></p>
               <p>Jin Miao, Sanjay Jain</p>
-              <!-- Place the icon and text on the same line to avoid stray underscores -->
               <p>
                 <a href="https://pubsonline.informs.org/doi/10.1287/mksc.2023.0007">
-                  <i class="fa fa-file-pdf fa-fw" style="margin-right:10px;"></i>
-                </a>Marketing Science (2024) vol. 43, no. 6, pp. 1242–1259.
+                  <i class="fa-solid fa-file-pdf fa-fw w3-margin-right"></i>
+                </a>
+                Marketing Science (2024) vol. 43, no. 6, pp. 1242–1259.
               </p>
               <p>
                 <a href="https://pubsonline.informs.org/doi/10.1287/mksc.2023.0007" class="no-underline">
-                  <i class="fa fa-external-link-alt fa-fw w3-margin-right"></i>
+                  <i class="fa-solid fa-up-right-from-square fa-fw w3-margin-right"></i>
                   Read the Full Paper Online
                 </a>
               </p>
@@ -203,12 +175,11 @@
           <!-- Working Paper Section (titles in purple) -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-padding-16 purple-title">
-              <i class="fa fa-file-alt fa-fw w3-margin-right w3-xxlarge"></i>
+              <i class="fa-solid fa-file-lines fa-fw w3-margin-right w3-xxlarge"></i>
               Working Paper
             </h2>
             <div class="w3-container">
-              <!-- Working paper title changed to purple -->
-              <p class="w3-opacity purple-text"><b>Pricing of Services: An Analysis of the Impact of Availability Bias</b></p>
+              <p class="w3-opacity"><b>Pricing of Services: An Analysis of the Impact of Availability Bias</b></p>
               <p>Sanjay Jain, Jin Miao</p>
               <button onclick="showWorkingPaperAbstract()" class="w3-button button-shaded w3-margin-top">Abstract</button>
               <div id="working-paper-abstract" style="display:none; margin-top: 15px;">
@@ -223,17 +194,16 @@
           <!-- Teaching Experience Section -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-padding-16">
-              <i class="fa fa-heart fa-fw w3-margin-right w3-xxlarge"></i>
+              <i class="fa-solid fa-heart fa-fw w3-margin-right w3-xxlarge"></i>
               Teaching Experience
             </h2>
             <!-- 2nd Course Section (Fall 2024) -->
             <div class="w3-container">
-              <!-- Change the course title to purple -->
-              <p class="w3-opacity purple-text"><b>Principles of Marketing (BBA Marketing Core)</b></p>
+              <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>
               <p>
-                <i class="fa fa-building fa-fw w3-margin-right"></i>Solo Instructor
+                <i class="fa-solid fa-building fa-fw w3-margin-right"></i>Solo Instructor
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <i class="fa fa-calendar fa-fw w3-margin-right"></i> Fall 2024
+                <i class="fa-solid fa-calendar fa-fw w3-margin-right"></i> Fall 2024
               </p>
               <p>Class Size: 56, Teaching Evaluation: 5.00/5.00</p>
               <p>Outstanding Teaching Award</p>
@@ -266,12 +236,11 @@
             
             <!-- 1st Course Section (Fall 2023) -->
             <div class="w3-container">
-              <!-- Change the course title to purple -->
-              <p class="w3-opacity purple-text"><b>Principles of Marketing (BBA Marketing Core)</b></p>
+              <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>
               <p>
-                <i class="fa fa-building fa-fw w3-margin-right"></i>Solo Instructor
+                <i class="fa-solid fa-building fa-fw w3-margin-right"></i>Solo Instructor
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <i class="fa fa-calendar fa-fw w3-margin-right"></i> Fall 2023
+                <i class="fa-solid fa-calendar fa-fw w3-margin-right"></i> Fall 2023
               </p>
               <p>Class Size: 49, Teaching Evaluation: 4.79/5.00</p>
               <!-- Aligned buttons for Fall 2023 -->
@@ -290,6 +259,40 @@
                   <li>He is a really kind and well-spoken professor, topics were well explained and assignments are clear and easy to find. I fairly enjoyed the class and would highly recommend.</li>
                 </ul>
               </div>
+              <hr>
+            </div>
+          </div>
+          
+          <!-- Awards Section -->
+          <div class="w3-container w3-card w3-white w3-margin-bottom">
+            <h2 class="w3-padding-16">
+              <i class="fa-solid fa-trophy fa-fw w3-margin-right w3-xxlarge"></i>
+              Awards
+            </h2>
+            <div class="w3-container">
+              <p class="w3-opacity"><b>ISMS Doctoral Dissertation Early Stage Grant, Finalist</b></p>
+              <p class="w3-opacity"><b>Outstanding Teaching Award</b></p>
+              <p class="w3-opacity"><b>AMA-Sheth Foundation Doctoral Consortium Fellow</b></p>
+              <p class="w3-opacity"><b>Betty and Gifford Johnson Travel Awards</b></p>
+              <p class="w3-opacity"><b>Nomination for President’s Teaching Excellence Awards</b></p>
+              <p class="w3-opacity"><b>Graduate Student Assembly Travel Award</b></p>
+              <p class="w3-opacity"><b>Academic Excellence Scholarship, Tsinghua University</b></p>
+              <p class="w3-opacity"><b>Baden-Württemberg-Stipendium, Mannheim University</b></p>
+              <hr>
+            </div>
+          </div>
+          
+          <!-- Teaching Assistantship Section -->
+          <div class="w3-container w3-card w3-white w3-margin-bottom">
+            <h2 class="w3-padding-16">
+              <i class="fa-solid fa-chalkboard-teacher fa-fw w3-margin-right w3-xxlarge"></i>
+              Teaching Assistantship
+            </h2>
+            <div class="w3-container">
+              <p class="w3-opacity"><b>Marketing Analytics (MSBA Marketing Core)</b></p>
+              <p class="w3-opacity"><b>Social Media Marketing (BBA Marketing Elective)</b></p>
+              <p class="w3-opacity"><b>Marketing Management (BBA Marketing Elective)</b></p>
+              <p class="w3-opacity"><b>Principles of Marketing (BBA Marketing Core)</b></p>            
               <hr>
             </div>
           </div>
