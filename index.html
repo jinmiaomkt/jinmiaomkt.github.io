@@ -186,8 +186,18 @@
               <button onclick="showWorkingPaperAbstract()" class="w3-button button-shaded w3-margin-top">Abstract</button>
               <div id="working-paper-abstract" style="display:none; margin-top: 15px;">
                 <p>
-                  Managers frequently offer limited-time products across various industries, yet few studies examine consumers' dynamic decisions to guide managerial choices about re-issuing previous products or introducing new ones. We develop <em>ProductGPT</em>, a novel deep generative pre-trained Transformer designed to predict sequential purchase decisions in limited-time product settings. Three key features differentiate our <em>ProductGPT</em> from standard Transformer models. First, it uses triplet input tokens simultaneously encapsulate decision history, the supply-side sequence of limited-time products, and the demand-side sequence of observed decision outcomes. This approach enables <em>ProductGPT</em> to capture meaningful product representations for all products in the assortment. Second, using the encoded long-range and short-range contexts, <em>ProductGPT</em> exclusively predicts consumer decisions. During the inference phase, we can leverage the model to generate consumer decision sequences under alternative limited-time product schemes, thus providing managers a decision tool to help design limited-time products. Third, <em>ProductGPT</em> incorporates product features as covariates, enabling managers to forecast sales of new limited-time products through feature-based product embeddings. We apply <em>ProductGPT</em> to a unique 20-month transaction dataset of video game loot boxes. Our model consistently outperforms several sophisticated benchmark models in sequential purchase predictions. We demonstrate its ability to forecast aggregate sales, discover behavioral patterns, and support product sequencing strategies.
+                  Managers frequently offer limited-time products across various industries, yet few studies examine consumers' dynamic decisions to guide managerial choices about re-issuing previous products or introducing new ones. We develop <em>ProductGPT</em>, a novel deep generative pre-trained Transformer designed to predict sequential purchase decisions in limited-time product settings. 
                 </p>
+
+                <p>
+                  Three key features differentiate our <em>ProductGPT</em> from standard Transformer models. First, it uses triplet input tokens simultaneously encapsulate decision history, the supply-side sequence of limited-time products, and the demand-side sequence of observed decision outcomes. This approach enables <em>ProductGPT</em> to capture meaningful product representations for all products in the assortment. Second, using the encoded long-range and short-range contexts, <em>ProductGPT</em> predicts consumer decisions sequences under alternative limited-time product schemes. Third, <em>ProductGPT</em> supports new product design by incorporating product features as covariates and forecasting consumer responses through feature-based product embeddings. 
+                </p>
+
+
+                <p>
+                 We apply <em>ProductGPT</em> to a unique 20-month transaction dataset of video game loot boxes. Our model consistently outperforms several sophisticated benchmark models in sequential purchase predictions. We demonstrate its ability to forecast aggregate sales, discover behavioral patterns, and support product sequencing strategies.
+                </p>
+
               </div>
               <hr>
             </div>
