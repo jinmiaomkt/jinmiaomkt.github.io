@@ -102,6 +102,10 @@
         var abstract = document.getElementById("abstract");
         abstract.style.display = abstract.style.display === "none" ? "block" : "none";
       }
+      function showJobMarketPaperAbstract() {
+        var abstract = document.getElementById("job-market-paper-abstract");
+        abstract.style.display = abstract.style.display === "none" ? "block" : "none";
+      }
       function showWorkingPaperAbstract() {
         var abstract = document.getElementById("working-paper-abstract");
         abstract.style.display = abstract.style.display === "none" ? "block" : "none";
@@ -183,8 +187,8 @@
                 <b><em>ProductGPT</em>: A Generative Model of Consumer Decision Dynamics in Limited-time Products</b>
               </p>
               <p class="purple-text">Jin Miao, Fanglin Chen, Ying Xie</p>
-              <button onclick="showWorkingPaperAbstract()" class="w3-button button-shaded w3-margin-top">Abstract</button>
-              <div id="working-paper-abstract" style="display:none; margin-top: 15px;">
+              <button onclick="showJobMarketPaperAbstract()" class="w3-button button-shaded w3-margin-top">Abstract</button>
+              <div id="job-market-paper-abstract" style="display:none; margin-top: 15px;">
                 <p>
                   Managers frequently offer limited-time products across various industries, yet few studies examine consumers' dynamic decisions to guide managerial choices about re-issuing previous products or introducing new ones. We develop <em>ProductGPT</em>, a novel deep generative pre-trained Transformer designed to predict sequential purchase decisions in limited-time product settings. 
                 </p>
